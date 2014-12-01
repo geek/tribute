@@ -4,7 +4,7 @@
   "description": "Hapi manifest for mysensors dashboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node node_modules/.bin/rejoice -c manifest.json -p node_modules"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/geek/tribute/issues"
   },
-  "homepage": "https://github.com/geek/tribute"
+  "homepage": "https://github.com/geek/tribute",
+  "dependencies": {
+    "catbox-memory": "1.1.x",
+    "hapi": "^8.0.0-rc5",
+    "jill": "1.x.x",
+    "rejoice": "^2.0.0-rc2"
+  }
 }

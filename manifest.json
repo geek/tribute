@@ -1,0 +1,20 @@
+{
+    "server": {
+        "cache": {
+            "engine": "catbox-memory"
+        }
+    },
+    "connections": [
+        {
+            "port": 15031,
+            "labels": ["api"]
+        }
+    ],
+    "plugins": {
+        "jill": [
+            {
+                "select": "api"
+            }
+        ]
+    }
+}
