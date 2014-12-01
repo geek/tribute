@@ -1,6 +1,6 @@
 {
   "name": "tribute",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Hapi manifest for mysensors dashboard",
   "main": "index.js",
   "scripts": {
