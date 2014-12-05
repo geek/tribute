@@ -25,6 +25,7 @@
     "catbox-memory": "1.1.x",
     "hapi": "^8.0.0-rc5",
     "jill": "1.x.x",
+    "leblanc": "0.x.x",
     "rejoice": "^2.0.0-rc2"
   }
 }

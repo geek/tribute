@@ -8,12 +8,21 @@
         {
             "port": 15031,
             "labels": ["api"]
+        },
+        {
+            "port": 8080,
+            "labels": ["web"]
         }
     ],
     "plugins": {
         "jill": [
             {
                 "select": "api"
+            }
+        ],
+        "leblanc": [
+            {
+                "select": "web"
             }
         ]
     }
