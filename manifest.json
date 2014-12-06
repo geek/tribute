@@ -7,7 +7,12 @@
     "connections": [
         {
             "port": 15031,
-            "labels": ["api"]
+            "labels": ["api"],
+            "routes": {
+                "cors": {
+                    "origin": ["http://localhost:8080"]
+                }
+            }
         },
         {
             "port": 8080,
@@ -22,7 +27,10 @@
         ],
         "leblanc": [
             {
-                "select": "web"
+                "select": "web",
+                "options": {
+                    "apiUrl": "http://localhost:15031"
+                }
             }
         ]
     }
