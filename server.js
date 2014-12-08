@@ -6,17 +6,19 @@ var Leblanc = require('leblanc');
 var server = new Hapi.Server();
 server.connection({ port: 15031 });
 
-server.plugins.register(Jill, function (err) {
+server.register(Jill, function (err) {
 
     if (err) {
         console.error(err);
+        process.exit(err);
     }
 });
 
-server.plugins.register(Leblanc, { apiUrl: 'http://jshoedown.com' }, function (err) {
+server.register({ register: Leblanc, options: { apiUrl: 'http://jshoedown.com' } }, function (err) {
 
     if (err) {
         console.error(err);
+;        process.exit(err)
     }
 });
 
@@ -25,8 +27,8 @@ server.start(function (err) {
 
     if (err) {
         console.error(err);
+        process.exit(err);
     }
-    else {
-        console.log('Server started');
-    }
+
+    console.log('Server started');
 });
