@@ -5,7 +5,7 @@ var Leblanc = require('leblanc');
 
 var server = new Hapi.Server();
 server.connection({ port: 15301, labels: 'web' });
-server.connection({ port: 15302, labels: 'api', routes: { cors: { origin: ['http://jshoedown.com', 'http://jshoedown.com:15301'] }} });
+server.connection({ port: 15302, labels: 'api', routes: { cors: { origin: ['http://jshoedown.com'] }} });
 
 server.select('api').register(Jill, function (err) {
 
@@ -15,7 +15,7 @@ server.select('api').register(Jill, function (err) {
     }
 });
 
-server.select('web').register({ register: Leblanc, options: { apiUrl: 'http://jshoedown.com:15302' } }, function (err) {
+server.select('web').register({ register: Leblanc, options: { apiUrl: 'http://api.jshoedown.com' } }, function (err) {
 
     if (err) {
         console.error(err);
