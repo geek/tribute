@@ -7,16 +7,12 @@
     "connections": [
         {
             "port": 15031,
-            "labels": ["api"],
+            "labels": ["api", "web"],
             "routes": {
                 "cors": {
                     "origin": ["http://localhost:8080"]
                 }
             }
-        },
-        {
-            "port": 8080,
-            "labels": ["web"]
         }
     ],
     "plugins": {
@@ -29,7 +25,7 @@
             {
                 "select": "web",
                 "options": {
-                    "apiUrl": "http://localhost:15031"
+                    "apiUrl": "http://jshoedown.com"
                 }
             }
         ]
