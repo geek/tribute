@@ -1,35 +1,59 @@
 var Hapi = require('hapi');
+var Inert = require('inert');
+var Jenny = require('jenny/lib/cli');
 var Jill = require('jill');
-var Leblanc = require('leblanc');
+var LeBlanc = require('leblanc');
+var Nes = require('nes');
+var Vision = require('vision');
 
 
-var server = new Hapi.Server();
-server.connection({ port: 15301, labels: 'web' });
-server.connection({ port: 15302, labels: 'api', routes: { cors: { origin: ['http://jshoedown.com'] }} });
+// Declare internals
 
-server.select('api').register(Jill, function (err) {
-
-    if (err) {
-        console.error(err);
-        process.exit(err);
-    }
-});
-
-server.select('web').register({ register: Leblanc, options: { apiUrl: 'http://api.jshoedown.com' } }, function (err) {
-
-    if (err) {
-        console.error(err);
-;        process.exit(err)
-    }
-});
+var internals = {};
 
 
-server.start(function (err) {
+internals.main = function () {
 
-    if (err) {
-        console.error(err);
-        process.exit(err);
-    }
+    var serverOptions = {
+        debug: {
+            request: ['received', 'error'],
+            log: ['error']
+        }
+    };
+    var server = new Hapi.Server(serverOptions);
+    server.connection({ port: 8080, labels: ['web'] });
 
-    console.log('Server started');
-});
+    server.register([Inert, Vision, Nes, LeBlanc], function (err) {
+
+        server.register(Jill, { routes: { prefix: '/api' } }, function (err) {
+
+            if (err) {
+              return internals.errorHandler(err);
+            }
+
+            server.start(function (err) {
+
+                if (err) {
+                  return internals.errorHandler(err);
+                }
+
+                console.log('Server started at http://localhost:8080');
+
+                Jenny.run({
+                    url: 'http://localhost:' + server.info.port,
+                    portname: '/dev/cu.usbmodem1411'
+                });
+            });
+        });
+    });
+};
+
+
+internals.errorHandler = function (err) {
+
+    console.error(err);
+    process.exit(1);
+};
+
+
+internals.main();

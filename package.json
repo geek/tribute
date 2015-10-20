@@ -22,8 +22,12 @@
   },
   "homepage": "https://github.com/geek/tribute",
   "dependencies": {
-    "hapi": "8.0.0-rc9",
+    "hapi": "11.x.x",
+    "inert": "3.x.x",
+    "jenny": "x.x.x",
     "jill": "1.x.x",
-    "leblanc": "0.x.x"
+    "leblanc": "x.x.x",
+    "nes": "1.x.x",
+    "vision": "3.x.x"
   }
 }
