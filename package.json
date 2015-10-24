@@ -4,7 +4,7 @@
   "description": "Hapi manifest for mysensors dashboard",
   "main": "index.js",
   "scripts": {
-    "start": "node componse.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "jill": "1.x.x",
     "leblanc": "x.x.x",
     "nes": "1.x.x",
+    "rejoice": "2.x.x",
     "vision": "3.x.x"
   }
 }

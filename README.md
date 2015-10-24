@@ -1,4 +1,4 @@
-Hapi manifest for mysensors dashboard
+hapi manifest for mysensors dashboard
 
 ### Usage
 

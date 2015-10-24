@@ -1,33 +1,25 @@
 {
-    "server": {
-        "cache": {
-            "engine": "catbox-memory"
-        }
-    },
     "connections": [
         {
-            "port": 15031,
-            "labels": ["api", "web"],
-            "routes": {
-                "cors": {
-                    "origin": ["http://localhost:8080"]
-                }
-            }
+            "port": 8080,
+            "labels": ["api", "web"]
         }
     ],
+    "server": {
+        "debug": {
+            "request": ["received", "error"],
+            "log": ["error"]
+        }
+    },
     "plugins": {
-        "jill": [
-            {
-                "select": "api"
+        "inert": {},
+        "vision": {},
+        "nes": {},
+        "leblanc": {},
+        "jill": [{
+            "routes": {
+                "prefix": "/api"
             }
-        ],
-        "leblanc": [
-            {
-                "select": "web",
-                "options": {
-                    "apiUrl": "http://jshoedown.com"
-                }
-            }
-        ]
+        }]
     }
 }
