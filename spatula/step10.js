@@ -97,4 +97,4 @@ internals.Jenny.prototype._handleCommand = function (err, command) {
 };
 
 
-// Try out jenny and jill
+// Try out jenny and jill (hint: node jenny-jill)
