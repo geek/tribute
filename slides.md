@@ -55,7 +55,8 @@
 * architecture
 * hapi fundamentals
 * - Break -
-* cook up something good
+* architecture recap
+* cooking up something good (Mac Demarco style)
 
 -------------------------------------------------
 
@@ -147,6 +148,8 @@
 * designed for multi-team collaboration
 * request lifecycle, not (blah, blah, next) =>
 * community, composability, battle tested, fun…
+   - this is a fun framework and community
+   - fun
 
 -------------------------------------------------
 
@@ -330,6 +333,48 @@
 * number()
 * object(schema)
 * string()
+
+-------------------------------------------------
+
+-> # BREAK <-
+
+-------------------------------------------------
+
+-> # architecture recap <-
+
+-------------------------------------------------
+
+# hardware architecture
+
+▛▀▀▀▀▀▀▀▀▀▜               
+▌ sensor  ▐                     ▛▀▀▀▀▀▀▀▀▀▜
+▛▀▀▀▀▀▀▀▀▀▜     ))) radio ))    ▌ arduino ▐
+▌ arduino ▐                     ▙▄▄▄▄▄▄▄▄▄▟
+▙▄▄▄▄▄▄▄▄▄▟                       ▌ USB ▐      
+                                  ▌     ▐
+                                ▛▀▀▀▀▀▀▀▀▀▜
+                                ▌ laptop  ▐
+                                ▙▄▄▄▄▄▄▄▄▄▟
+
+-------------------------------------------------
+
+# laptop architecture
+
+▛▀▀▀▀▀▀▀▀▀▜               
+▌   nes   ▐  
+▌ leblanc ▐                     ▛▀▀▀▀▀▀▀▀▀▜
+▛▀▀▀▀▀▀▀▀▀▜   (( websockets ))  ▌ nes     ▐
+▌ browser ▐   (( http ))        ▌ jill    ▐
+▙▄▄▄▄▄▄▄▄▄▟                     ▌ hapi    ▐
+                                ▌         ▐                                
+▛▀▀▀▀▀▀▀▀▀▀▀▜                   ▌ mongo   ▐
+▌jenny      ▐  (( websockets )) ▙▄▄▄▄▄▄▄▄▄▟
+▌cowboymouth▐  (( http ))
+▙▄▄▄▄▄▄▄▄▄▄▄▟
+  ▌serial ▐
+ ▛▀▀▀▀▀▀▀▀▀▜
+ ▌MySensors▐
+ ▙▄▄▄▄▄▄▄▄▄▟
 
 -------------------------------------------------
 
