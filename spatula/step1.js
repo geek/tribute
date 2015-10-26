@@ -22,7 +22,7 @@ exports.register = function (server, options, next) {
 
 
 exports.register.attributes = {
-    name: 'jenny',
+    name: 'jill',
     version: '0.0.2'
 };
 

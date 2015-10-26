@@ -1,3 +1,5 @@
+/// jenny.js ///
+
 // Load modules
 
 var Events = require('events');
@@ -93,3 +95,6 @@ internals.Jenny.prototype._handleCommand = function (err, command) {
         this.emit('command', command);
     }
 };
+
+
+// Try out jenny and jill
