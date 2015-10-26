@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/geek/tribute",
   "dependencies": {
+    "boom": "2.x.x",
     "hapi": "11.x.x",
     "inert": "3.x.x",
     "jenny": "x.x.x",
     "jill": "1.x.x",
+    "joi": "6.x.x",
     "leblanc": "x.x.x",
     "nes": "1.x.x",
     "rejoice": "2.x.x",

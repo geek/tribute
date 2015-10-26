@@ -6,3 +6,8 @@ hapi manifest for mysensors dashboard
 $ npm install
 $ npm start
 ```
+
+### Requires
+
+* mongo running
+* arduino connected via USB
