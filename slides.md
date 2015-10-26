@@ -54,6 +54,8 @@
 * what tools we will use
 * architecture
 * hapi fundamentals
+* - Break -
+* cook up something good
 
 -------------------------------------------------
 
@@ -260,7 +262,6 @@
     exports.register  = function (server, options, next) {
      // Plugin
     }
-
     exports.register.attributes = {
      name, version, pkg, dependencies, multiple
     }
@@ -316,3 +317,35 @@
 
 * user (example4)
 * with hapi (example5/server5)
+
+-------------------------------------------------
+
+# joi schema function by types
+
+* any()
+* array()
+* boolean()
+* date()
+* func()
+* number()
+* object(schema)
+* string()
+
+-------------------------------------------------
+
+-> time to cook up something good <-
+                (
+               )  )
+           ______(____
+          (___________)
+           /         \\
+          /           \\
+         |             |
+       ____\\             /____
+    ()____'.__      __.'____()
+    jgs  .'` .'```'. `-.
+        ().'`       `'.()
+
+-------------------------------------------------
+
+-> Open *spatula* <-
